@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body {background-color: hsl(0, 100%, 90%);}
+            h1 {margin-left: 500px;}
+            h3 {margin-left: 500px;}
+            h2 {margin-left: 300px;}
+            b {margin-left: 500px;}
+            button {color: rgb(12, 90, 2);margin-left: 500px;}
+        </style>
+        
+    </head>
+    <body>
+        <h1>Calculate your sum</h1>
+        <h1 id = "answer"></h1>
+        <strong><h2>Make sure that the denominator is same or else it will not work</h2></strong>
+        <br>
+        <br>
+        <h3>Write your first Number</h3>
+        <br>
+        <b>Num 1</b><input type = "enter your 1st no:" id= "num1">
+        <br>
+        <br>
+        <b>Num 1</b><input type = "enter your 2st no:" id= "num2">
+        <br>
+        <br>
+        <br>
+        <h3>Write your second Number</h3>
+        <br>
+        <b>Num 2</b><input type = "enter your 1st no:" id= "num3">
+        <br>
+        <br>
+        <b>Num 2</b><input type = "enter your 2st no:" id= "num4">
+        <br>
+        <br>
+        <button onclick="calculate()">Calculate</button>
+
+        <script>
+            function calculate(){
+                var field1 = document.getElementById("num1").value;
+                var field2 = document.getElementById("num2").value;
+
+                var field3 = document.getElementById("num3").value;
+                var field4 = document.getElementById("num4").value;
+
+                var result= parseFloat(field1)+parseFloat(field3);
+                
+                if (!isNaN(result)){
+                    document.getElementById("answer").innerHTML="The answer is " + field1 + "/" + field2 + " + " + field3 + "/" + field4 + " = " + result + "/" + field4;
+                }
+            }
+        </script>
+
+        <img src="thank you.jpg" alt="thank you" width="140" height="103">
+    </body>
+</html>
